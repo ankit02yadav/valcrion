@@ -47,6 +47,7 @@
 }
 
 .header__logo-text {
+  font-family: var(--font-display);
   font-weight: 700;
   font-size: 1.2rem;
   color: var(--text-primary);
@@ -62,6 +63,7 @@
 }
 
 .header__nav-link {
+  font-family: var(--font-display);
   padding: 8px 14px;
   border-radius: var(--radius-sm);
   font-size: 0.88rem;
