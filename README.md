@@ -18,8 +18,8 @@ npm run build
 ## 🔑 Default Admin Login
 
 ```
-Email:    admin@valcrion.com
-Password: admin123
+Email:    ************
+Password: *********
 ```
 
 ## 📁 Project Structure
