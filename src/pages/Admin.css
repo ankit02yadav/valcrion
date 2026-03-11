@@ -1,0 +1,340 @@
+/* ══════════════════════════════════════════════════
+   ADMIN PANEL — CSS
+══════════════════════════════════════════════════ */
+
+/* Stats Grid */
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.admin-stat-card {
+  padding: 20px;
+  text-align: center;
+  border-radius: var(--radius-xl);
+}
+
+.admin-stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.admin-stat-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Overlay */
+.admin-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 16px;
+  backdrop-filter: blur(4px);
+}
+
+/* Approve Modal */
+.admin-approve-modal {
+  width: 100%;
+  max-width: 480px;
+  border-radius: var(--radius-xl);
+  padding: 28px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.admin-approve-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-approve-icon {
+  width: 42px; height: 42px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--accent-glow), var(--purple-700));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.admin-approve-header h3 { font-size: 1rem; margin: 0 0 4px; }
+.admin-approve-sub { font-size: 0.82rem; color: var(--text-muted); margin: 0; }
+
+.admin-approve-applicant {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.admin-approve-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.83rem;
+}
+
+.admin-approve-label {
+  color: var(--text-muted);
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.admin-approve-val {
+  color: var(--text-primary);
+  text-align: right;
+  word-break: break-all;
+}
+
+/* Approve success state */
+.admin-approve-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.admin-approve-success-icon {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: rgba(16,185,129,0.1);
+  border: 2px solid var(--success);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+/* Credentials card */
+.admin-credentials {
+  width: 100%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 4px;
+}
+
+.admin-credential-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-credential-row:last-child { border-bottom: none; }
+
+.admin-credential-label {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.admin-credential-val {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: var(--font-mono, monospace);
+  word-break: break-all;
+}
+
+/* Table */
+.admin-table-wrap {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  min-width: 480px;
+}
+
+.admin-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  font-weight: 600;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.admin-table tr:last-child td { border-bottom: none; }
+.admin-table tbody tr:hover { background: var(--accent-soft); }
+
+.admin-title-btn {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+.admin-title-btn:hover { color: var(--accent); text-decoration: underline; }
+
+/* Job / card list */
+.admin-jobs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-job-card {
+  padding: 20px;
+  border-radius: var(--radius-xl);
+  transition: transform var(--transition);
+}
+.admin-job-card:hover { transform: translateX(3px); }
+.admin-job-card--unread { border-left: 3px solid var(--accent) !important; }
+
+.admin-cv-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+}
+
+/* Modal forms */
+.admin-modal {
+  padding: 24px;
+  border-radius: var(--radius-xl);
+  margin-bottom: 24px;
+}
+
+/* ── Reviews Tab ── */
+.admin-review-card {
+  padding: 20px;
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-review-stars {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.admin-review-quote {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.65;
+  background: var(--bg-surface);
+  border-left: 3px solid var(--accent);
+  padding: 10px 14px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.admin-review-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.admin-review-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-review-avatar {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-glow), var(--purple-700));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.admin-review-name { font-weight: 600; font-size: 0.88rem; }
+.admin-review-role { font-size: 0.75rem; color: var(--text-muted); }
+
+/* ══ RESPONSIVE ══════════════════════════════════ */
+@media (max-width: 1024px) {
+  .admin-stats { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .admin-stats { grid-template-columns: repeat(2, 1fr); }
+  .admin-stat-value { font-size: 1.6rem; }
+  .admin-approve-modal { padding: 20px 16px; }
+  .admin-modal { padding: 16px; }
+  .admin-job-card { padding: 14px; }
+
+  .admin-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .admin-approve-modal {
+    max-width: 100%;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    max-height: 92vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-stats { grid-template-columns: 1fr 1fr; }
+  .admin-stat-value { font-size: 1.4rem; }
+  .admin-approve-header { flex-wrap: wrap; }
+}
