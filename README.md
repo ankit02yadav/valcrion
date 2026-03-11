@@ -54,15 +54,15 @@ All links and social media are in **`src/constants.ts`**:
 
 ```ts
 export const SOCIAL = {
-  linkedin: "https://www.linkedin.com/in/ankit02yadav",
-  instagram: "https://www.instagram.com/ankit02_yadav",
-  website: "https://claude.ai",
+  linkedin: "https://www.linkedin.com/in/valcrion",
+  instagram: "https://www.instagram.com/valcrion.dev",
+  website: "valcrion",
 };
 
-export const IMAGES = {
-  logo: "/assets/logo.png",  // ← add your logo here
-  // ...
-};
+//  export const IMAGES = {
+//    logo: "/assets/logo.png",  // ← add your logo here
+//  // ...
+//  };
 ```
 
 ## 🗄️ Database
@@ -96,13 +96,3 @@ Each collection maps to a MongoDB collection:
 - **Light**: Soft lavender glassmorphism
 - Toggle via the sun/moon icon in the header
 
-## 📝 Version Control
-
-```bash
-git init
-git add .
-git commit -m "feat: initial Valcrion platform"
-git branch -M main
-git remote add origin YOUR_GITHUB_URL
-git push -u origin main
-```
